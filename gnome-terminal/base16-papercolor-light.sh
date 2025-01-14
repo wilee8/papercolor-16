@@ -51,7 +51,7 @@ if which "$DCONF" > /dev/null 2>&1; then
         DEFAULT_KEY="$BASE_KEY_NEW/:$DEFAULT_SLUG"
         PROFILE_KEY="$BASE_KEY_NEW/:$PROFILE_SLUG"
 
-         # copy existing settings from default profile
+        # copy existing settings from default profile
         $DCONF dump "$DEFAULT_KEY/" | $DCONF load "$PROFILE_KEY/"
 
         # add new copy to list of profiles
@@ -59,8 +59,7 @@ if which "$DCONF" > /dev/null 2>&1; then
 
         # update profile values with theme options
         dset visible-name "'$PROFILE_NAME'"
-        dset palette "'#262626:#8959a8:#718c00:#4271ae:#005f87:#d7005f:#3e999f:#d0d0d0:#808080:#8959a8:#718c00:#4271ae:#005f87:#d7005f:#3e999f:#f3f3f3'"
-        dset palette "'#f3f3f3:#8959a8:#718c00:#4271ae:#005f87:#d7005f:#3e999f:#d0d0d0:#808080:#8959a8:#718c00:#4271ae:#005f87:#d7005f:#3e999f:#262626'"
+        dset palette "['#f3f3f3', '#8959a8', '#718c00', '#4271ae', '#005f87', '#d7005f', '#3e999f', '#d0d0d0', '#808080', '#8959a8', '#718c00', '#4271ae', '#005f87', '#d7005f', '#3e999f', '#262626']"
         dset background-color "'#f3f3f3'"
         dset foreground-color "'#4d4d4c'"
         dset bold-color "'#4d4d4c'"
